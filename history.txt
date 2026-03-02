@@ -1,0 +1,56 @@
+    1  pwd
+    2  sudo chown $USER /var/www  
+    3  ls
+    4  ls -la
+    5  cd var
+    6  cd /var
+    7  sudo mkdir www
+    8  cd www
+    9  sudo chown $USER /var/www  
+   10  git -v
+   11  sudo yum install git -y
+   12  git clone https://github.com/diveintocode-corp/cdp_web_web_aws_deploy_task.git
+   13  cd cdp
+   14  cd cdp_web_web_aws_deploy_task/
+   15  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+   16  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc 
+   17  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+   18  source ~/.bashrc
+   19  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+   20  sudo yum install -y gcc-c++ openssl-devel readline-devel zlib-devel libffi-devel libyaml libyaml-devel
+   21  TMPDIR="${PWD}/tmp" rbenv install -v 3.3.0
+   22  git branch
+   23  git remote set-url origin https://github.com/jameshmwangi/rails_web_aws_deploy_task.git
+   24  git push -u origin master
+   25  git pull
+   26  rbenv global 3.3.0
+   27  ruby -v
+   28  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+   29  source ~/.bashrc
+   30  nvm install 24.13.1
+   31  npm install -g yarn@1.22.22
+   32  yarn --version   # should show 1.22.22
+   33  ~/.nvm/nvm.~/.nvm/nvm.sh  ~/.nvm/nvm.sh  ~/.nvm/nvm.sh  
+   34  ls
+   35  ~/.nvm/nvm.sh  
+   36  nvm --version
+   37  sudo amazon-linux-extras install postgresql12 -y  
+   38  cat /etc/os-release
+   39  sudo dnf update -y
+   40  sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+   41  # Install PostgreSQL 15 server and dev libraries
+   42  sudo dnf install -y postgresql15 postgresql15-server postgresql15-devel
+   43  sudo postgresql-setup --initdb
+   44  sudo systemctl enable postgresql
+   45  sudo systemctl start postgresql
+   46  sudo systemctl status postgresql
+   47   gem install bundler  
+   48  bundle install  
+   49  yarn install --check-files  
+   50  sudo -u postgres createuser -s rafiki_user1
+   51  bundle exec rails db:create
+   52  bundle exec rails:migrate
+   53  bundle exec rails db:migrate
+   54  bundle exec rails server
+   55  bundle exec rails s -b 0.0.0.0
+   56  history > history.txt
