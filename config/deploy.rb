@@ -10,6 +10,7 @@ set :log_level, :info
 
 after 'deploy:published', 'deploy:seed'
 after 'deploy:finished', 'deploy:restart'
+after 'deploy:finished', 'nginx:reload'
 
 namespace :deploy do
   desc 'Run seed'
